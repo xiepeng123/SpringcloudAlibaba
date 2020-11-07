@@ -1,0 +1,16 @@
+.idea
+/.idea/
+.classpath
+.project
+*.iml
+*.eml
+build
+target
+*.log
+*.log.*
+.DS_Store
+*.cache
+*.lock
+.gradle
+.MF
+/*/*.iml
