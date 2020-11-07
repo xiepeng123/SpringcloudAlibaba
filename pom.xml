@@ -15,6 +15,7 @@
     <module>provider-payment8001</module>
     <module>consumer-feign-order80</module>
     <module>gateway-gateway9527</module>
+    <module>config-nacos-client3377</module>
   </modules>
 
 
@@ -74,6 +75,13 @@
       <dependency>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        <version>2.2.3.RELEASE</version>
+      </dependency>
+
+      <!-- nacos-discovery -->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         <version>2.2.3.RELEASE</version>
       </dependency>
 

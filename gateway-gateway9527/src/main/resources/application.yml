@@ -32,6 +32,11 @@ spring:
           predicates:
             Path=/payment/lb/** #断言,路径相匹配的进行路由
 
+        - id: nacos_config_route
+          uri: lb://nacos-config-client
+          predicates:
+            Path=/nacos/config/** #断言,路径相匹配的进行路由
+
 #eureka:
 #  instance:
 #    hostname: cloud-gateway-service
