@@ -12,9 +12,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @author: XZQ
  * @create: 2020/3/11 21:04
  **/
-//禁用spring自动配置数据库
+
 @SpringBootApplication
 @EnableDiscoveryClient
+//禁用spring自动配置数据库
 @EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
 public class NacosConfigClientMain3377 {
     public static void main(String[] args) {
