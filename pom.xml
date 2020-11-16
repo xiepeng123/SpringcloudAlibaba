@@ -16,6 +16,7 @@
     <module>consumer-feign-order80</module>
     <module>gateway-gateway9527</module>
     <module>config-nacos-client3377</module>
+    <module>sentinel-service8401</module>
   </modules>
 
 
@@ -34,20 +35,8 @@
   </properties>
 
 
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.3.4.RELEASE</version>
-    <relativePath/> <!-- lookup parent from repository -->
-  </parent>
-
   <dependencies>
-    <!-- nacos-config -->
-    <dependency>
-      <groupId>com.alibaba.cloud</groupId>
-      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-      <version>2.2.3.RELEASE</version>
-    </dependency>
+
   </dependencies>
 
   <dependencyManagement>
@@ -57,7 +46,7 @@
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>2.3.4.RELEASE</version>
+        <version>2.2.11.RELEASE</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -66,7 +55,7 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
-        <version>Hoxton.SR8</version>
+        <version>Hoxton.SR9</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -92,6 +81,20 @@
         <version>2.2.5.RELEASE</version>
       </dependency>
 
+      <!-- sentinel -->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        <version>2.2.1.RELEASE</version>
+      </dependency>
+
+      <!-- sentinel 做持久化 -->
+      <dependency>
+        <groupId>com.alibaba.csp</groupId>
+        <artifactId>sentinel-datasource-nacos</artifactId>
+        <version>1.8.0</version>
+      </dependency>
+
       <!--openfeign-->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
@@ -102,13 +105,13 @@
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-actuator</artifactId>
-        <version>2.3.4.RELEASE</version>
+        <version>2.2.11.RELEASE</version>
       </dependency>
 
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
-        <version>2.3.4.RELEASE</version>
+        <version>2.2.11.RELEASE</version>
       </dependency>
 
       <!-- MySql -->

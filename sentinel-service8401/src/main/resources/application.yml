@@ -1,0 +1,27 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: sentinel-service8401
+
+  ##nacos 配置
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    sentinel:
+      eager: true
+      transport:
+        dashbord: 127.0.0.1:8080
+        port: 8719
+      filter:
+        url-patterns: /**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+###-Dserver.port=9001 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-xp
