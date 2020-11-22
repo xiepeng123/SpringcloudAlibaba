@@ -1,5 +1,6 @@
 package com.xp.cloud;
 
+import java.util.concurrent.TimeUnit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -27,6 +28,11 @@ public class SentinelService8401 {
 
     @GetMapping("/hello")
     public String hello() {
+      try {
+        TimeUnit.MILLISECONDS.sleep(2000);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
       return "didispace.com";
     }
 

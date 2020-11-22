@@ -60,6 +60,13 @@
         <scope>import</scope>
       </dependency>
 
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>2.2.1.RELEASE</version>
+        <type>pom</type>
+      </dependency>
+
       <!-- nacos-discovery -->
       <dependency>
         <groupId>com.alibaba.cloud</groupId>
