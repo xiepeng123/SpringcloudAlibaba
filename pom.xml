@@ -17,7 +17,8 @@
     <module>gateway-gateway9527</module>
     <module>config-nacos-client3377</module>
     <module>sentinel-service8401</module>
-  </modules>
+		<module>consumer-nacos-order84</module>
+	</modules>
 
 
   <!--统一管理jar包和版本-->

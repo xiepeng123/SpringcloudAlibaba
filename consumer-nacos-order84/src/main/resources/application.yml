@@ -1,0 +1,32 @@
+server:
+  port: 8400
+
+spring:
+  application:
+    name: consumer-nacos-order84
+
+  ##nacos 配置
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    sentinel:
+      eager: true
+      transport:
+        dashbord: 127.0.0.1:8080
+        port: 8719
+      filter:
+        url-patterns: /**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+# 设置feign客户端超时时间(OpenFeign默认支持ribbon)
+ribbon:
+  # 指的是建立连接所用的时间,适用于网络状态正常的情况下,两端连接所用的时间
+  ReadTimeout: 5000
+  # 指的是建立连接后从服务器读取到可用资源所用的时间
+  ConnectTimeout: 5000
