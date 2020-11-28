@@ -17,6 +17,13 @@ spring:
         port: 8719
       filter:
         url-patterns: /**
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            dataId: ${spring.application.name}-sentinel
+            groupId: DEFAULT_GROUP
+            rule-type: flow
 
 management:
   endpoints:

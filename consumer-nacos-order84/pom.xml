@@ -37,6 +37,12 @@
 			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
 		</dependency>
 
+		<!-- sentinel 做持久化 -->
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-datasource-nacos</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>com.xp.cloud</groupId>
 			<artifactId>commons</artifactId>
