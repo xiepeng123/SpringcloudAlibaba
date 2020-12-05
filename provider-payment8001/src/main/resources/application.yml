@@ -5,9 +5,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://rm-2ze29fa0m4wvt7679oo.mysql.rds.aliyuncs.com:3306/test1?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
-    username: user_zhgj
-    password: user_zhgj_2018
+    url: jdbc:mysql://127.0.0.1:3306/cloud_test?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: 123456
 
   application:
     name: provider-payment8001

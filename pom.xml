@@ -18,6 +18,9 @@
     <module>config-nacos-client3377</module>
     <module>sentinel-service8401</module>
 		<module>consumer-nacos-order84</module>
+    <module>seata-order-service2001</module>
+    <module>seata-account-service2002</module>
+		<module>seata-storage-service2003</module>
 	</modules>
 
 
@@ -103,6 +106,13 @@
         <version>1.8.0</version>
       </dependency>
 
+      <!-- seata -->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        <version>2.2.3.RELEASE</version>
+      </dependency>
+
       <!--openfeign-->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
@@ -168,8 +178,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-
 
 
   <build>

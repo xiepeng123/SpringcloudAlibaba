@@ -1,0 +1,70 @@
+server:
+  port: 2001
+spring:
+  application:
+    name: seata-order-service
+  cloud:
+    nacos:
+      discovery: #Nacos注册中心地址
+        server-addr: localhost:8848
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/seata_order?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: 123456
+
+feign:
+  hystrix:
+    enabled: true
+
+logging:
+  level:
+    io:
+      seata: debug
+
+mybatis:
+  ##config-location: classpath:mybatis/mybatis.cfg.xml                # mybatis配置文件所在路径
+  mapper-locations: classpath*:com/xp/cloud/**/**/*.xml            # mapper映射文件
+
+seata:
+  enabled: true
+  enable-auto-data-source-proxy: true
+#  application-id: order
+  tx-service-group: my_test_tx_group
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+  config:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      username: nacos
+      password: nacos
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    disable-global-transaction: false
+  client:
+    rm:
+      report-success-enable: false
+
+ribbon:
+  #建立连接超时时间
+  ConnectTimeout: 20000
+  #建立连接之后，读取响应资源超时时间
+  ReadTimeout: 20000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
